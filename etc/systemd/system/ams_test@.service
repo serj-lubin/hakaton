@@ -1,0 +1,17 @@
+                                                                                                                            240/240               100%
+[Unit]
+Description=Foo on %i
+
+[Service]
+ExecStart="/tmp/new.sh" "%i"
+Type=forking
+#PIDFile=/tmp/ams.pid
+WorkingDirectory=/usr/local/etc/seraphim/
+Restart=always
+KillMode=process
+
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
