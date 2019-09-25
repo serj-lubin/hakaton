@@ -1,0 +1,7 @@
+
+sig_num=9
+
+ pid_ams=$(pgrep -f zapovednik2.ini)
+ sleep 1
+ echo "Сервис запущен с пидом" $pid_ams " и будет убит с помощью сигнала " $sig_num
+ kill -"$sig_num" $pid_ams 
